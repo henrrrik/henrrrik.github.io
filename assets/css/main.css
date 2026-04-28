@@ -103,7 +103,8 @@ h1 {
   }
   .avatar {
     position: static;
+    float: right;
     width: 100px;
-    margin: 0 0 1.25rem;
+    margin: 0 0 0.75rem 1rem;
   }
 }
