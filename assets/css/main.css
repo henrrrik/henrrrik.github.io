@@ -96,3 +96,14 @@ h1 {
 .links a:hover {
   border-bottom-color: currentColor;
 }
+
+@media (max-width: 30rem) {
+  main {
+    padding: 2rem 1.5rem;
+  }
+  .avatar {
+    position: static;
+    width: 100px;
+    margin: 0 0 1.25rem;
+  }
+}
