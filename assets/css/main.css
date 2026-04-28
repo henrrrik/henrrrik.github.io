@@ -55,6 +55,7 @@ main {
   background: #000;
   color: #f2f2f2;
   border-radius: 6px;
+  overflow: hidden;
 }
 
 .avatar {

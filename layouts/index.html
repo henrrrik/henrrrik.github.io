@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   {{ $js := resources.Get "js/grid-shader.js" | resources.Minify | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{ $tumble := resources.Get "js/tumble.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $tumble.RelPermalink }}" integrity="{{ $tumble.Data.Integrity }}" defer></script>
 </head>
 <body>
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
