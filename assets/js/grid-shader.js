@@ -143,8 +143,12 @@ void main() {
     mouseY = -1e6;
   });
 
-  window.addEventListener('resize', resize);
-  resize();
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(() => resize()).observe(canvas);
+  } else {
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(resize);
+  }
 
   function render(ts) {
     gl.clearColor(0, 0, 0, 0);
