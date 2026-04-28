@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.Title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $js := resources.Get "js/grid-shader.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <main>
+    {{ with resources.Get "img/henrik.png" }}
+      {{ $avatar := .Resize "200x" }}
+      <img class="avatar" src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="{{ site.Title }}">
+    {{ end }}
+    <h1>{{ site.Title }}</h1>
+    <div class="bio">
+      {{ .Content }}
+    </div>
+    <ul class="links">
+      {{ with site.Params.github }}<li><a href="{{ . }}">GitHub</a></li>{{ end }}
+      {{ with site.Params.linkedin }}<li><a href="{{ . }}">LinkedIn</a></li>{{ end }}
+    </ul>
+  </main>
+</body>
+</html>

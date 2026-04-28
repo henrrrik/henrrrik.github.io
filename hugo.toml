@@ -1,0 +1,9 @@
+baseURL = "https://henrrrik.github.com/"
+languageCode = "en-us"
+title = "Henrik Sjökvist"
+
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  github = "https://github.com/henrrrik"
+  linkedin = "https://www.linkedin.com/in/hsjokvist/"
