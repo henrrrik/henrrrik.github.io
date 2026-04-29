@@ -13,6 +13,8 @@
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
   {{ $tumble := resources.Get "js/tumble.js" | resources.Minify | resources.Fingerprint }}
   <script src="{{ $tumble.RelPermalink }}" integrity="{{ $tumble.Data.Integrity }}" defer></script>
+  {{ $glitch := resources.Get "js/glitch.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $glitch.RelPermalink }}" integrity="{{ $glitch.Data.Integrity }}" defer></script>
 </head>
 <body>
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
