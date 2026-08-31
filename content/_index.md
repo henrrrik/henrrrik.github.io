@@ -2,4 +2,4 @@
 title: "Henrik Sjökvist"
 ---
 
-Technical leader with 20+ years experience building complex things on the internet, 15+ years experience managing hybrid development teams. I have extensive experience in the entire digital product/SaaS lifecycle, from building MVPs to scaling and managing tech debt in successful services.
+Hands-on CTO with 20+ years building services on the internet and 15+ years leading hybrid teams. I build the architecture, pipelines and ways of working that let teams ship — from greenfield, agent-native MVPs to scaling and de-risking services already in production.
